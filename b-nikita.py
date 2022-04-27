@@ -1,4 +1,4 @@
-from typing import List, Tuple
+from typing import List
 
 
 def zipper(a: List[int], b: List[int], n: [int]) -> List[int]:

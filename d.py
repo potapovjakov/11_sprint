@@ -2,10 +2,13 @@ from typing import List, Tuple, Optional
 
 
 def two_sum(arr: List[int], target_sum: int) -> Optional[Tuple[int, int]]:
-    for i in range(0, len(arr)):
-        for j in range(i+1, len(arr)):
-            if arr[i] + arr[j] == target_sum:
-                return arr[i], arr[j]
+    previous = set()
+    for A in arr:
+        Y = target_sum - A
+        if Y in previous:
+            return Y, A
+        else:
+            previous.add(A)
     return None
 
 
